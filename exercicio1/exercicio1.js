@@ -5,14 +5,17 @@
 //- No módulo principal, importe as três funções e solicite ao usuário que insira um array de números.
 //- Utilize as funções importadas para calcular e exibir no console a soma, a multiplicação e a média dos elementos do array fornecido pelo usuário.
 
-const multiplicaArray = require('./multiplicaArray');
+
 const calculaMedia = require('./calculaMedia');
 
 const somaEstoqueInicial = require('./somaEstoqueInicial.js');
-
 const estoqueInicial = [10, 5, 8, 12, 6];
 const estoque = somaEstoqueInicial(estoqueInicial);
 console.log(estoque);
 
+const valorTotalEstoque = require('./multiplicaArray');
+const produtos = [10, 5, 8, 12, 6];
+const valorTotal = valorTotalEstoque(produtos);
+console.log('Valor total do estoque:', valorTotal);
 
 
