@@ -6,20 +6,23 @@
 function criaAluno (nome, nota1, nota2){
     let aluno = Object.create({});
       aluno.nome = nome;
-      aluno.number1 = number1;
-      aluno.number2 = number2;
+      aluno.nota1 = nota1;
+      aluno.nota2 = nota2;
 
       return aluno;
   }
   
-  // Criando alguns alunos
+  // Criando alunos para array
 let aluno1 = criaAluno('Nila', 9, 10);
 let aluno2 = criaAluno('Jaira', 7, 9);
 let aluno3 = criaAluno('André', 6, 5);
 
-// Exibindo os dados dos alunos
-console.log(aluno1);
-console.log(aluno2);
-console.log(aluno3);
-  
+// array pronta
 let listaAlunos = [ aluno1, aluno2, aluno3];
+
+let mediaAlunos = listaAlunos.reduce((alunosComMedia, aluno) => {
+    let media = (aluno.nota1+ aluno.nota2)/2;
+    alunosComMedia.push({ nome: aluno.nome, media: media });
+  return alunosComMedia;
+}, []);
+
