@@ -26,3 +26,5 @@ let mediaAlunos = listaAlunos.reduce((alunosComMedia, aluno) => {
   return alunosComMedia;
 }, []);
 
+//falta:
+//- Exiba o array resultante no console, ordenado em ordem decrescente de média.
