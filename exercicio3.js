@@ -4,11 +4,14 @@
 //- Exiba no console as informações de cada livro, utilizando o método `obterInformacoes`.
 
 function criaLivro (titulo, autor, anoPublicacao){
-    let aluno = Object.create({});
+    let livro = Object.create({});
       livro.titulo = titulo;
       livro.autor = autor;
       livro.anoPublicacao = anoPublicacao;
-
+      const obterInformacoes = (livro) => {
+        return "O livro " + livro.titulo + "foi escrito pelo autor " + livro.autor + "no ano de " + livro.anoPublicacao;
+      };
+      
       return livro;
   }
   
