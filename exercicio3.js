@@ -3,17 +3,19 @@
 //- Crie três objetos da classe `Livro`, cada um representando um livro diferente.
 //- Exiba no console as informações de cada livro, utilizando o método `obterInformacoes`.
 
-function criaLivro (titulo, autor, anoPublicacao){
-    let livro = Object.create({});
-      livro.titulo = titulo;
-      livro.autor = autor;
-      livro.anoPublicacao = anoPublicacao;
-      const obterInformacoes = (livro) => {
-        return "O livro " + livro.titulo + "foi escrito pelo autor " + livro.autor + "no ano de " + livro.anoPublicacao;
-      };
-      
-      return livro;
+
+
+
+class Livro {
+  constructor (titulo, autor, anoPublicação){
+      this.titulo = titulo;
+      this.autor = autor;
+      this.anoPublicacao = parseInt(anoPublicação);
   }
+  obterInformaçoes(){
+    return 'O livro "this.titulo" do autor "this.autor" foi pulicado em "this.anoPublicação".
+  }
+}
   
   // Criando livros para array
 let livro1 = criaLivro('O Guia do Mochileiro das Galáxias', 'Douglas Adams', 1979);
