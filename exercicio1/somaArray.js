@@ -1,6 +1,6 @@
-function somaEstoqueInicial(array) {
+function soma(array) {
     return array.reduce((acumulador, valorProduto) => acumulador + valorProduto);
   }
   
-  module.exports = somaEstoqueInicial;
+  module.exports = soma;
   

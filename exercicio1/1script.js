@@ -5,19 +5,24 @@
 //- No módulo principal, importe as três funções e solicite ao usuário que insira um array de números.
 //- Utilize as funções importadas para calcular e exibir no console a soma, a multiplicação e a média dos elementos do array fornecido pelo usuário.
 
+const readline = require('readline');
+let somaArray = require('./somaEstoqueInicial.js');
+let multiplicaArray = require('./multiplicaArray.js');
+let calculaMedia = require('./calculaMedia.js');
 
-const somaEstoqueInicial = require('./somaEstoqueInicial.js');
-const estoqueInicial = [10, 15, 18, 12, 26];
-const estoque = somaEstoqueInicial(estoqueInicial);
-console.log(estoque);
+let rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-const valorTotalEstoque = require('./multiplicaArray');
-const produtos = [20, 25, 28, 32, 36];
-const valorTotal = valorTotalEstoque(produtos);
-console.log('Valor total do estoque:', valorTotal);
+rl.question('Insira um array de números separados por vírgula: ', (input) => {
+  let array = input.split(',').map(Number);
+  let soma = somaArray(array);
+  let multiplicacao = multiplicaArray(array);
+  let media = calculaMedia(array);
+  console.log('Soma:', soma);
+  console.log('Multiplicação:', multiplicacao);
+  console.log('Média:', media);
 
-const calculaMedia = require('./calculaMedia');
-const estoque = [8, 15, 18, 12, 26];
-const media = calculaMedia(estoque);
-console.log('Média do estoque:', media);
-
+  rl.close();
+});
