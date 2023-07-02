@@ -7,6 +7,27 @@
 
 
 const readline = require('readline');
-let soma = require('./somaEstoqueInicial.js');
-let multiplica = require('./multiplicaArray.js');
-let calculaMedia = require('./calculaMedia.js');
+let filtroPares = require('./filtrarPares.js');
+let somaImpares = require('./somaImpares.js');
+
+let rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+rl.question = readline.createInterface(
+    {
+        'Digite uma lista de números separados por vírgula', imput => {
+            let digitados = input.split(',').map(Number);
+            exibirNumerosPares(digitados);
+            exibirSomaImpares(digitados);
+            rl.close();
+        }
+    }
+)
+
+function numerosPares(arrayPares, digitados){
+  let pares = filtroPares(digitados);
+  arrayPares.push(pares);
+  return arrayPares;
+}
