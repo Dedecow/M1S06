@@ -14,19 +14,18 @@ let criaAluno = (nome, nota1, nota2) => {
   return aluno;
 }
   
-  // Criando alunos para array
 let aluno1 = criaAluno('Nila', 9, 10);
 let aluno2 = criaAluno('Jaira', 7, 9);
 let aluno3 = criaAluno('André', 6, 5);
 
-// array pronta
 let listaAlunos = [ aluno1, aluno2, aluno3];
 
-let mediaAlunos = listaAlunos.reduce((alunosComMedia, aluno) => {
-    let media = (aluno.nota1+ aluno.nota2)/2;
-    alunosComMedia.push({ nome: aluno.nome, media: media });
-  return alunosComMedia;
-}, []);
+function calcularMedia(alunosMedia, aluno) {
+  let media = (aluno.nota1 + aluno.nota2) / 2;
+  alunosMedia.push({ nome: aluno.nome, media: media });
+  return alunosMedia;
+}
 
-//falta:
-//- Exiba o array resultante no console, ordenado em ordem decrescente de média.
+let media = listaAlunos.reduce(calcularMedia, []);
+
+console.log (alunosMedia);
