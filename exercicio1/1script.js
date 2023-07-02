@@ -6,7 +6,7 @@
 //- Utilize as funções importadas para calcular e exibir no console a soma, a multiplicação e a média dos elementos do array fornecido pelo usuário.
 
 const readline = require('readline');
-let soma = require('./somaEstoqueInicial.js');
+let soma = require('./somaArray.js');
 let multiplica = require('./multiplicaArray.js');
 let calculaMedia = require('./calculaMedia.js');
 
