@@ -3,14 +3,16 @@
 //- Crie um novo array contendo objetos com as propriedades `nome` e `media`, onde `media` é a média das notas.
 //- Exiba o array resultante no console, ordenado em ordem decrescente de média.
 
-function criaAluno (nome, nota1, nota2){
-    let aluno = Object.create({});
-      aluno.nome = nome;
-      aluno.nota1 = nota1;
-      aluno.nota2 = nota2;
+let criaAluno = (nome, nota1, nota2) => {
+  nota1 = parseInt(nota1);
+  nota2 = parseInt(nota2);
+  let aluno = new Aluno{};
+  aluno.nome = nome;
+  aluno.nota1 = nota1;
+  aluno.nota2 = nota2;
 
-      return aluno;
-  }
+  return aluno;
+}
   
   // Criando alunos para array
 let aluno1 = criaAluno('Nila', 9, 10);
