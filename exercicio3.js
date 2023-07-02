@@ -7,13 +7,13 @@
 
 
 class Livro {
-  constructor (titulo, autor, anoPublicação){
+  constructor (titulo, autor, anoPublicacao){
       this.titulo = titulo;
       this.autor = autor;
-      this.anoPublicacao = parseInt(anoPublicação);
+      this.anoPublicacao = parseInt(anoPublicacao);
   }
   obterInformaçoes(){
-    return 'O livro "this.titulo" do autor "this.autor" foi pulicado em "this.anoPublicação".
+    return 'O livro "' + this.titulo + '" do autor "' + this.autor + '" foi publicado em "' + this.anoPublicacao + '".';
   }
 }
   
