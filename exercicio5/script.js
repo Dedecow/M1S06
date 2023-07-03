@@ -14,12 +14,11 @@ let digitados = null;
 let rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
-  });
+});
 
 rl.question = readline.createInterface(
-    {
-        'Digite uma lista de números separados por vírgula', input => {
-            let digitados = input.split(',').map(Number);
+    {'Digite uma lista de números separados por vírgula', input => {
+            digitados = input.split(',').map(Number);
             filtroPares(digitados);
             somaImpares(digitados);
             rl.close();
@@ -30,4 +29,10 @@ rl.question = readline.createInterface(
 module.exports = {
   digitados: digitados
 };
+
+let somaFiltroImpares = filtroImpares.reduce((acc, impar) => acc + impar, 0);
+
+module.exports = somaFiltroImpares;
+
+console.log(somaFiltroImpares);
 

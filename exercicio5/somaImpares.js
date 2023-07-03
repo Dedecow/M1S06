@@ -3,11 +3,11 @@
 
   // importando os numeros digitados
 
-  let require ( digitados) = require ('./script.js');
+  let require digitados = require ('./script.js');
 
   //criando uma bollean para identificar pares
 
-  let ePar = (digitados) => digitados %2 === 0;
+  let ePar = digitado => digitado %2 === 0;
 
   //função a ser exportada:
 
@@ -15,6 +15,4 @@
 
   console.log(filtroImpares);
 
-  let somaFiltroImpares = filtroImpares.reduce((acc, impar) => acc + impar, 0);
 
-  module.exports = somaFiltroImpares;
