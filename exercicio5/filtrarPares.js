@@ -2,15 +2,15 @@
 
 // importando os numeros digitados
 
-import ( digitados) from ('./script.js');
+require ( digitados) = require ('./script.js');
 
 //criando uma bollean para identificar pares
 
-var ePar = digitados => digitados %2 === 0;
+let ePar = (digitados) => digitados %2 === 0;
 
 //função a ser exportada:
 
-var filtroPares = digitados.filter(ePar);
+let filtroPares = digitados.filter(ePar);
 
 console.log(filtroPares);
 
