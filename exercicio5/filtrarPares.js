@@ -2,7 +2,7 @@
 
 // importando os numeros digitados
 
-require ( digitados) = require ('./script.js');
+let require ( digitados) = require ('./script.js');
 
 //criando uma bollean para identificar pares
 
