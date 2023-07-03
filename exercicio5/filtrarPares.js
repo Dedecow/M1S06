@@ -1,10 +1,17 @@
 //- No módulo `filtrarPares.js`, exporte uma função chamada `filtrarPares`, que recebe um array de números como parâmetro e retorna um novo array contendo apenas os números pares.
 
+// importando os numeros digitados
 
-function calculaMedia(array) {
-    const soma = array.reduce((acumulador, valor) => acumulador + valor, 0);
-    const media = soma / array.length;
-    return media;
-  }
-  
-  module.exports = calculaMedia;
+import ( digitados) from ('./script.js');
+
+//criando uma bollean para identificar pares
+
+var ePar = digitados => digitados %2 === 0;
+
+//função a ser exportada:
+
+var filtroPares = digitados.filter(ePar);
+
+console.log(filtroPares);
+
+module.exports = filtroPares;
