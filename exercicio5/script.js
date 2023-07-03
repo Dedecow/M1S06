@@ -19,15 +19,14 @@ rl.question = readline.createInterface(
     {
         'Digite uma lista de números separados por vírgula', imput => {
             let digitados = input.split(',').map(Number);
-            exibirNumerosPares(digitados);
-            exibirSomaImpares(digitados);
+            filtroPares(digitados);
+            somaImpares(digitados);
             rl.close();
         }
     }
 )
 
-function numerosPares(arrayPares, digitados){
-  let pares = filtroPares(digitados);
-  arrayPares.push(pares);
-  return arrayPares;
-}
+module.exports = {
+  digitados: digitados
+};
+
