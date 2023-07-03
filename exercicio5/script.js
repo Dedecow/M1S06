@@ -9,6 +9,7 @@
 const readline = require('readline');
 let filtroPares = require('./filtrarPares.js');
 let somaImpares = require('./somaImpares.js');
+let digitados = null;
 
 let rl = readline.createInterface({
     input: process.stdin,
@@ -17,7 +18,7 @@ let rl = readline.createInterface({
 
 rl.question = readline.createInterface(
     {
-        'Digite uma lista de números separados por vírgula', imput => {
+        'Digite uma lista de números separados por vírgula', input => {
             let digitados = input.split(',').map(Number);
             filtroPares(digitados);
             somaImpares(digitados);
